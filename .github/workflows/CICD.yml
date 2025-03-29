@@ -30,6 +30,7 @@ jobs:
   # deployment of application
   deploy:
       runs-on: self_hosted
+      needs: build
 
       steps:
       - name: Deploy to Tomcat
