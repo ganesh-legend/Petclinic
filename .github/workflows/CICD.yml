@@ -5,6 +5,7 @@ on:
     branches: [ "main" ]
     
 jobs:
+  # build the application
   build:
 
     runs-on: self-hosted
@@ -25,3 +26,12 @@ jobs:
         
     - name: Build with Maven
       run: mvn clean install
+
+  # deployment of application
+  deploy:
+      runs-on: self_hosted
+
+      steps:
+      - name: Deploy to Tomcat
+        run: cp /home/ubuntu/actions-runner/_work/Petclinic/Petclinic/target/petclinic.war /var/lib/tomcat9/webapps/
+        
