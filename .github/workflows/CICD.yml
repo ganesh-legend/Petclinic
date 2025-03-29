@@ -34,5 +34,5 @@ jobs:
 
       steps:
       - name: Deploy to Tomcat
-        run: cp /home/ubuntu/actions-runner/_work/Petclinic/Petclinic/target/petclinic.war /var/lib/tomcat9/webapps/
+        run: sudo cp /home/ubuntu/actions-runner/_work/Petclinic/Petclinic/target/petclinic.war /var/lib/tomcat9/webapps/
         
